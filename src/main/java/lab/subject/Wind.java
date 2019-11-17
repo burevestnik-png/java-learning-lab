@@ -1,13 +1,18 @@
 package lab.subject;
 
 public class Wind extends Subject {
-    public Wind(double x, double y, double z) {
-        super(x, y, z);
+
+    public Wind(double x,
+                double y,
+                double z,
+                String name) {
+        super(x, y, z, name);
     }
 
     @Override
     public String getAbilities() {
-        return null;
+        return "может передвигаться" + System.lineSeparator() + "может налетать порывами" + System.lineSeparator() +
+                "может шевелить листочки";
     }
 
     @Override
@@ -15,5 +20,13 @@ public class Wind extends Subject {
         place.setX(place.getX() + offsetX*1000);
         place.setY(place.getY() + offsetY*1000);
         place.setZ(place.getZ() + offsetZ*2);
+    }
+
+    public String gust() {
+        return "налетает порывами";
+    }
+
+    public String stirLeaves() {
+        return "шевелит листочки";
     }
 }

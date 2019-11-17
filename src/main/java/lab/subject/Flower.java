@@ -1,13 +1,17 @@
 package lab.subject;
 
-public class Flower extends Subject {
-    public Flower(double x, double y, double z) {
-        super(x, y, z);
+public class Flower extends Subject implements ILookable {
+
+    public Flower(double x,
+                  double y,
+                  double z,
+                  String name) {
+        super(x, y, z, name);
     }
 
     @Override
     public String getAbilities() {
-        return null;
+        return "может передвигаться" + System.lineSeparator() + "может пестреть";
     }
 
     @Override

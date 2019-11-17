@@ -1,20 +1,16 @@
 package app;
 
-import lab.object.tree.IPart.Creater;
-import lab.object.tree.IPart.IPartFactory;
+import lab.StoryTeller;
+import lab.object.tree.IPart.Creator;
 import lab.object.tree.IPart.LeafFactory;
 import lab.object.tree.Tree;
-import lab.subject.Bird;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("это работает");
-        Bird was = new Bird(1,2,3);
-        String a = was.getAbilities();
-        System.out.println(a);
+        Creator creator = new Creator(new LeafFactory());
+        StoryTeller storyTeller = new StoryTeller(creator);
 
-        Creater creater = new Creater(new LeafFactory());
-        Tree tree = creater.createTree();
-        System.out.println(tree.toString());
+        System.out.println(storyTeller.tellStory());
+
     }
 }

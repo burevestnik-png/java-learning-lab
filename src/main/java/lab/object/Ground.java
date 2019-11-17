@@ -1,8 +1,19 @@
 package lab.object;
 
-public class Ground extends Object {
-    public Ground(double x, double y, double z) {
-        super(x, y, z);
+import lab.ISeatable;
+
+public class Ground extends Object implements ISeatable {
+
+    public Ground(double x,
+                  double y,
+                  double z,
+                  String name) {
+        super(x, y, z, name);
+    }
+
+    @Override
+    public String exist() {
+        return "существует миллиарды лет";
     }
 
     @Override

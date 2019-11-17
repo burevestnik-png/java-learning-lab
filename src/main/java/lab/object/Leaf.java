@@ -3,10 +3,18 @@ package lab.object;
 import java.util.*;
 
 public class Leaf extends Object {
-    public Leaf(double x, double y, double z) {
-        super(x, y, z);
+
+    public Leaf(double x,
+                double y,
+                double z,
+                String name) {
+        super(x, y, z, name);
     }
 
+    @Override
+    public String exist() {
+        return "существует полгода";
+    }
 
 
     @Override
