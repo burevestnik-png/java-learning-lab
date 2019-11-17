@@ -40,7 +40,7 @@ public abstract class MaterialObject {
             return false;
         }
 
-        if (this.name == ((MaterialObject) object).name) {
+        if (this.name.equals(((MaterialObject) object).name)) {
             return true;
         }
 
