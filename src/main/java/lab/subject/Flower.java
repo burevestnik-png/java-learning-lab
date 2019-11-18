@@ -1,6 +1,6 @@
 package lab.subject;
 
-public class Flower extends Subject implements ILookable {
+public class Flower extends Subject implements ILookable, IKnowledge {
 
     public Flower(double x,
                   double y,

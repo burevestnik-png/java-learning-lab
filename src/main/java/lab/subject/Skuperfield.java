@@ -42,4 +42,13 @@ public class Skuperfield extends Subject implements ISeatable {
         if (object instanceof ILookable) return "любуется на " + object;
         return "не может любоваться на " + object;
     }
+
+    public  String seem() {
+        return "кажется";
+    }
+
+    public  String doNotKnow(MaterialObject object) {
+        if (object instanceof ILookable) return "не знает " + object;
+        return "не знает " + object;
+    }
 }

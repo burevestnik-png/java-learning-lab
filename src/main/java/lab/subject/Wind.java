@@ -22,8 +22,8 @@ public class Wind extends Subject {
         place.setZ(place.getZ() + offsetZ*2);
     }
 
-    public String gust() {
-        return "налетает порывами";
+    public String gust(Rush rush) {
+        return  "налетает " + rush;
     }
 
     public String stirLeaves() {

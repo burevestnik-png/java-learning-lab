@@ -1,13 +1,13 @@
-package lab.object.tree;
+package lab.subject;
 
 import lab.ISeatable;
-import lab.object.Leaf;
 import lab.object.Object;
 import lab.object.tree.IPart.IPart;
+import lab.subject.IFlyPlace;
 
 import java.util.List;
 
-public class Tree extends Object implements ISeatable {
+public class Tree extends Object implements ISeatable, IFlyPlace {
 
     private List<IPart> parts;
 
@@ -32,4 +32,13 @@ public class Tree extends Object implements ISeatable {
     public String exist() {
         return "существует десятилетиями";
     }
+
+    public String waveLeaves() {
+        return "машет листочками";
+    }
+
+    public String speak() {
+        return "шепчут на своем языке";
+    }
+
 }

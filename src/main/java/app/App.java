@@ -3,7 +3,6 @@ package app;
 import lab.StoryTeller;
 import lab.object.tree.IPart.Creator;
 import lab.object.tree.IPart.LeafFactory;
-import lab.object.tree.Tree;
 
 public class App {
     public static void main(String[] args) {

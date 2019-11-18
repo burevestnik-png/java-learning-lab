@@ -4,7 +4,7 @@ import lab.ISeatable;
 import lab.MaterialObject;
 import lab.object.Food;
 
-public class Bird extends Subject implements ILookable {
+public class Bird extends Subject implements ILookable, IKnowledge {
 
     public Bird(double x,
                 double y,
@@ -53,4 +53,28 @@ public class Bird extends Subject implements ILookable {
         return "улетает";
     }
 
+    public String fly(MaterialObject object) {
+        if (object instanceof ISeatable) return "порхает на " + object;
+        return "не порхает на " + object;
+    }
+
+    public String stopAfraid() {
+        return "перестали бояться";
+    }
+
+    public  String flyNear(MaterialObject object) {
+        return "летает около " + object;
+    }
+
+    public  String shakeHead() {
+        return "наклоняет голову в разные стороны";
+    }
+
+    public String touch(MaterialObject object) {
+        return "задевает " + object;
+    }
+
+    public  String think(MaterialObject object) {
+        return "думает что " + object + " неживой предпет";
+    }
 }

@@ -2,7 +2,7 @@ package lab.object.tree.IPart;
 
 
 import lab.object.Ground;
-import lab.object.tree.Tree;
+import lab.subject.Tree;
 import lab.subject.*;
 
 
@@ -39,6 +39,10 @@ public class Creator {
 
     public Ground createGround() {
         return new Ground(1, 1, 0, "Земля");
+    }
+
+    public Rush createRush() {
+        return new Rush(1, 1, 0, "порывы");
     }
 }
 
