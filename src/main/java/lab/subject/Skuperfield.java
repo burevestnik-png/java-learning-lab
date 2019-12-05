@@ -33,6 +33,13 @@ public class Skuperfield extends Subject implements ISeatable {
     }
 
     public String doNotMove() {
+        class Local {
+            private String description = "This is a local class";
+
+            public String getDescription() {
+                return description;
+            }
+        }
         return "не двигается";
     }
 

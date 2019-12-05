@@ -82,6 +82,6 @@ public class Bird extends Subject implements ILookable, IKnowledge {
     }
 
     public  String think(MaterialObject object) {
-        return "думает что " + object + " неживой предпет";
+        return "думает что " + object + " неживой предмет";
     }
 }
