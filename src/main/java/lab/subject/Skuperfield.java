@@ -65,4 +65,12 @@ public class Skuperfield extends Subject implements ISeatable {
         if (object instanceof ILookable) return "не знает " + object;
         return "не знает " + object;
     }
+
+    public static class InnerStaticClass {
+        String description = "This is static inner class";
+
+        public String getDescription() {
+            return description;
+        }
+    }
 }
