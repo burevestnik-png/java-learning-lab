@@ -1,13 +1,11 @@
 package lab.subject;
 
 import lab.ISeatable;
-import lab.object.Object;
 import lab.object.tree.IPart.IPart;
-import lab.subject.IFlyPlace;
 
 import java.util.List;
 
-public class Tree extends Object implements ISeatable, IFlyPlace {
+public class Tree extends Subject implements ISeatable, IFlyPlace {
 
     private List<IPart> parts;
 
@@ -28,11 +26,6 @@ public class Tree extends Object implements ISeatable, IFlyPlace {
         place.setZ(place.getZ() + offsetZ/1000);
     }
 
-    @Override
-    public String exist() {
-        return "существует десятилетиями";
-    }
-
     public String waveLeaves() {
         return "машет листочками";
     }
@@ -41,4 +34,8 @@ public class Tree extends Object implements ISeatable, IFlyPlace {
         return "шепчут на своем языке";
     }
 
+    @Override
+    public String getAbilities() {
+        return "махать листочками" + "говорить на своем языке";
+    }
 }

@@ -1,8 +1,8 @@
-package lab.object;
+package lab.object.tree.IPart;
 
-import java.util.*;
+import lab.object.Object;
 
-public class Leaf extends Object {
+public class Leaf extends Object implements IPart{
 
     public Leaf(double x,
                 double y,

@@ -1,11 +1,15 @@
 package lab.subject;
 
+import com.google.inject.assistedinject.Assisted;
+import com.google.inject.assistedinject.AssistedInject;
+
 public class Wind extends Subject {
 
-    public Wind(double x,
-                double y,
-                double z,
-                String name) {
+    @AssistedInject
+    public Wind(@Assisted("x") double x,
+                @Assisted("y") double y,
+                @Assisted("z") double z,
+                @Assisted String name) {
         super(x, y, z, name);
     }
 

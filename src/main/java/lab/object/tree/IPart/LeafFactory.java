@@ -12,7 +12,7 @@ public class LeafFactory implements IPartFactory {
 
         List<IPart> parts = new ArrayList<>();
         for (int counter = 0; counter < quantity; counter++) {
-            parts.add(new LeafPart());
+            parts.add(new Leaf(0,0,0,"листочек"));
         }
 
         return parts;

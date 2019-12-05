@@ -1,15 +1,18 @@
 package lab.subject;
 
+import com.google.inject.assistedinject.Assisted;
+import com.google.inject.assistedinject.AssistedInject;
 import lab.ISeatable;
 import lab.MaterialObject;
 import lab.object.Food;
 
 public class Bird extends Subject implements ILookable, IKnowledge {
 
-    public Bird(double x,
-                double y,
-                double z,
-                String name) {
+    @AssistedInject
+    public Bird(@Assisted("x") double x,
+                @Assisted("y") double y,
+                @Assisted("z") double z,
+                @Assisted String name) {
         super(x, y, z, name);
     }
 

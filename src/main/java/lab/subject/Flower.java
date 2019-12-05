@@ -1,11 +1,14 @@
 package lab.subject;
 
-public class Flower extends Subject implements ILookable, IKnowledge {
+import com.google.inject.assistedinject.Assisted;
+import com.google.inject.assistedinject.AssistedInject;
 
-    public Flower(double x,
-                  double y,
-                  double z,
-                  String name) {
+public class Flower extends Subject implements ILookable, IKnowledge {
+    @AssistedInject
+    public Flower(@Assisted("x") double x,
+                  @Assisted("y") double y,
+                  @Assisted("z") double z,
+                  @Assisted String name) {
         super(x, y, z, name);
     }
 

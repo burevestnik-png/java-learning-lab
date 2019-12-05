@@ -1,13 +1,16 @@
 package lab.subject;
 
+import com.google.inject.assistedinject.Assisted;
+import com.google.inject.assistedinject.AssistedInject;
 import lab.ISeatable;
 import lab.MaterialObject;
 
 public class Skuperfield extends Subject implements ISeatable {
-    public Skuperfield(double x,
-                       double y,
-                       double z,
-                       String name) {
+    @AssistedInject
+    public Skuperfield(@Assisted("x") double x,
+                       @Assisted("y") double y,
+                       @Assisted("z") double z,
+                       @Assisted String name) {
         super(x, y, z, name);
     }
 

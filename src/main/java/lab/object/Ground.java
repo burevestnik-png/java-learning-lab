@@ -1,13 +1,16 @@
 package lab.object;
 
+import com.google.inject.assistedinject.Assisted;
+import com.google.inject.assistedinject.AssistedInject;
 import lab.ISeatable;
 
 public class Ground extends Object implements ISeatable {
 
-    public Ground(double x,
-                  double y,
-                  double z,
-                  String name) {
+    @AssistedInject
+    public Ground(@Assisted("x") double x,
+                  @Assisted("y") double y,
+                  @Assisted("z") double z,
+                  @Assisted String name) {
         super(x, y, z, name);
     }
 
