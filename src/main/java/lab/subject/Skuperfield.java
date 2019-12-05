@@ -73,4 +73,12 @@ public class Skuperfield extends Subject implements ISeatable {
             return description;
         }
     }
+
+    public class InnerClass {
+        String description = "This is inner class";
+
+        public String getDescription() {
+            return description;
+        }
+    }
 }
