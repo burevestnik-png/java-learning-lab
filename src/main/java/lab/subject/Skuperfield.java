@@ -4,6 +4,7 @@ import com.google.inject.assistedinject.Assisted;
 import com.google.inject.assistedinject.AssistedInject;
 import lab.ISeatable;
 import lab.MaterialObject;
+import lab.exceptions.MovementException;
 
 public class Skuperfield extends Subject implements ISeatable {
     @AssistedInject
@@ -22,7 +23,10 @@ public class Skuperfield extends Subject implements ISeatable {
     }
 
     @Override
-    public void move(double offsetX, double offsetY, double offsetZ) {
+    public void move(double offsetX, double offsetY, double offsetZ) throws MovementException {
+        if ((offsetX < 0) || (offsetY < 0) || (offsetZ < 0)) {
+            throw new MovementException("Отрицательная дичь...");
+        }
         place.setX(place.getX() + offsetX);
         place.setY(place.getY() + offsetY);
         place.setZ(place.getZ() + offsetZ);

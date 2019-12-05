@@ -1,6 +1,7 @@
 package lab.subject;
 
 import lab.ISeatable;
+import lab.exceptions.MovementException;
 import lab.object.tree.IPart.IPart;
 
 import java.util.List;
@@ -20,7 +21,10 @@ public class Tree extends Subject implements ISeatable, IFlyPlace {
 
 
     @Override
-    public void move(double offsetX, double offsetY, double offsetZ) {
+    public void move(double offsetX, double offsetY, double offsetZ) throws MovementException {
+        if ((offsetX < 0) || (offsetY < 0) || (offsetZ < 0)) {
+            throw new MovementException("Отрицательная дичь...");
+        }
         place.setX(place.getX() + offsetX/1000);
         place.setY(place.getY() + offsetY/1000);
         place.setZ(place.getZ() + offsetZ/1000);

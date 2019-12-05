@@ -2,6 +2,7 @@ package lab.subject;
 
 import com.google.inject.assistedinject.Assisted;
 import com.google.inject.assistedinject.AssistedInject;
+import lab.exceptions.MovementException;
 
 public class Flower extends Subject implements ILookable, IKnowledge {
     @AssistedInject
@@ -18,7 +19,10 @@ public class Flower extends Subject implements ILookable, IKnowledge {
     }
 
     @Override
-    public void move(double offsetX, double offsetY, double offsetZ) {
+    public void move(double offsetX, double offsetY, double offsetZ) throws MovementException {
+        if ((offsetX < 0) || (offsetY < 0) || (offsetZ < 0)) {
+            throw new MovementException("Отрицательная дичь...");
+        }
         place.setX(place.getX() + offsetX*0.0001);
         place.setY(place.getY() + offsetY*0.0001);
         place.setZ(place.getZ() + offsetZ*0.0001);

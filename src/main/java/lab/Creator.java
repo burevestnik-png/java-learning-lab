@@ -44,19 +44,25 @@ public class Creator {
     };
 
     private Injector createInjectorForSubject(String configurationName)  {
-        if (configurationName == null) throw new InjectorCreatingException();
+        if (configurationName == null) {
+            throw new InjectorCreatingException("Configuration name is null");
+        }
         Class<? extends Subject> subjectClass = subjectMap.get(configurationName);
         return changeConfigurationToSubject(subjectClass);
     }
 
     private Injector createInjectorForObject(String configurationName) {
-        if (configurationName == null) throw new InjectorCreatingException();
+        if (configurationName == null) {
+            throw new InjectorCreatingException("Configuration name is null");
+        }
         Class<? extends Object> objectClass = objectMap.get(configurationName);
         return changeConfigurationToObject(objectClass);
     }
 
     private Injector createInjectorForIPartFactory(String configurationName) {
-        if (configurationName == null) throw new InjectorCreatingException();
+        if (configurationName == null) {
+            throw new InjectorCreatingException("Configuration name is null");
+        }
         Class<? extends IPartFactory> supportClass = supportMap.get(configurationName);
         return changeConfigurationToIPartFactory(supportClass);
     }

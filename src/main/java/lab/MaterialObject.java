@@ -1,5 +1,7 @@
 package lab;
 
+import lab.exceptions.MovementException;
+
 import java.util.Objects;
 
 public abstract class MaterialObject {
@@ -19,7 +21,7 @@ public abstract class MaterialObject {
         return name;
     }
 
-    public abstract void move(double offsetX, double offsetY, double offsetZ);
+    public abstract void move(double offsetX, double offsetY, double offsetZ) throws MovementException;
 
     @Override
     public String toString() {

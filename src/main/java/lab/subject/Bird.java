@@ -4,6 +4,7 @@ import com.google.inject.assistedinject.Assisted;
 import com.google.inject.assistedinject.AssistedInject;
 import lab.ISeatable;
 import lab.MaterialObject;
+import lab.exceptions.MovementException;
 import lab.object.Food;
 
 public class Bird extends Subject implements ILookable, IKnowledge {
@@ -17,7 +18,10 @@ public class Bird extends Subject implements ILookable, IKnowledge {
     }
 
     @Override
-    public void move(double offsetX, double offsetY, double offsetZ) {
+    public void move(double offsetX, double offsetY, double offsetZ) throws MovementException {
+        if ((offsetX < 0) || (offsetY < 0) || (offsetZ < 0)) {
+            throw new MovementException("Отрицательная дичь...");
+        }
         place.setX((place.getX() + offsetX)*10);
         place.setY((place.getY() + offsetY)*10);
         place.setZ((place.getZ() + offsetZ)*10);
