@@ -32,6 +32,10 @@ public class StoryTeller {
 
 
         StringBuilder story = new StringBuilder();
+        story.append(skuperfield + " " + skuperfield.wasteStrength() + " и " + skuperfield.makeSure() + " что, "
+                + skuperfield.notGetFree() + ", поэтому " + skuperfield.doNotMove() + ". ");
+        story.append("У " + skuperfield + " " + skuperfield.goNumb() + ", " + skuperfield.doNotFeel() + ". ");
+        story.append("У " + skuperfield + " " + skuperfield.dissapear(PartOfBody.TORSO) + " и " +skuperfield.painDissapear() + ". ");
         story.append(wind).append(" ").append(wind.gust(rush)).append(" и ").append(wind.stirLeaves()).append(". ");
         story.append(skuperfield + " " + skuperfield.seem() + ", " + tree + " " + tree.waveLeaves() + " и " + tree.speak() + ". ");
         story.append("На " + ground + " " + Colors.BLUE + " и " + Colors.PINK +" " +flower + " " + flower.dazzle() + ". ");
@@ -52,6 +56,10 @@ public class StoryTeller {
         story.append(bird + " " + bird.shakeHead() + ". ");
         story.append(bird + " " + bird.goAway() + " и " + bird.touch(skuperfield) + ". ");
         story.append(skuperfield + " " +skuperfield.melt() + " и " + skuperfield.cry() + ". ");
+        story.append("\"" + skuperfield.sayInspiringSpeech() + " " + skuperfield.thinkAbout(skuperfield) + " " +
+                skuperfield.explainWhy() + ". ");
+        story.append(skuperfield.swear(skuperfield, tree, bird) + ". ");
+        story.append(skuperfield.sayEndOfSpeech() + "\". ");
 
         return story;
     }
