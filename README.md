@@ -1,3 +1,2 @@
-# prog-lab3
-This repository contains programming laboratory works.
-Made by Yaroslav Kulinich, the student of 1 course from P3113 group.
+# Programming lab 3
+This is pretty simple laboratory work, which I've done at 1 course in my university
